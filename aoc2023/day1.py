@@ -1,5 +1,4 @@
 import re
-import functools
 
 def part1(data: list[str]):
   clean_lines = __process_data(data)
