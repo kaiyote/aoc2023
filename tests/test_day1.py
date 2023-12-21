@@ -12,4 +12,4 @@ def test_part1():
   assert day1.part1(real_data) == 54331
 
 def test_part2():
-  assert day1.part2(real_data) == 0
+  assert day1.part2(real_data) == 54518

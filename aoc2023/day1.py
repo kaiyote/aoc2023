@@ -18,7 +18,6 @@ def part2(data: list[str]):
   for line in clean_lines:
     line = re.sub(r'(oneight|threeight|fiveight|sevenine|nineight|eightwo|eighthree|twone|one|two|three|four|five|six|seven|eight|nine)', __string_to_int, line)
     numbers = [x for x in line if x.isdigit()]
-    print(numbers)
     total += int(numbers[0] + numbers[-1])
 
   return total
