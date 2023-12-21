@@ -1,21 +1,5 @@
 # aoc2023
 
-[![PyPI - Version](https://img.shields.io/pypi/v/aoc2023.svg)](https://pypi.org/project/aoc2023)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aoc2023.svg)](https://pypi.org/project/aoc2023)
+its like typescript or elixir or something, but its python so its different
 
------
-
-**Table of Contents**
-
-- [Installation](#installation)
-- [License](#license)
-
-## Installation
-
-```console
-pip install aoc2023
-```
-
-## License
-
-`aoc2023` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+anywho, advent 2023, in python, thanks to hatch i guess for the spinup at least
