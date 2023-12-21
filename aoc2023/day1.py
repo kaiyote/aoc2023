@@ -16,7 +16,9 @@ def part2(data: list[str]):
 
   total = 0
   for line in clean_lines:
-    line = re.sub(r'(oneight|threeight|fiveight|sevenine|nineight|eightwo|eighthree|twone|one|two|three|four|five|six|seven|eight|nine)', __string_to_int, line)
+    while re.sub(r'(one|two|three|four|five|six|seven|eight|nine)', __string_to_int, line) != line:
+      line = re.sub(r'(one|two|three|four|five|six|seven|eight|nine)', __string_to_int, line)
+
     numbers = [x for x in line if x.isdigit()]
     total += int(numbers[0] + numbers[-1])
 
@@ -28,36 +30,20 @@ def __process_data(data: list[str]):
 def __string_to_int(number_word: re.Match[str]):
   match number_word.group(0):
     case "one":
-      return "1"
+      return "1e" # the trailing last letter is important so the next replace can work if you run into a "smushed double letter"
     case "two":
-      return "2"
+      return "2o"
     case "three":
-      return "3"
+      return "3e"
     case "four":
-      return "4"
+      return "4r"
     case "five":
-      return "5"
+      return "5e"
     case "six":
-      return "6"
+      return "6x"
     case "seven":
-      return "7"
+      return "7n"
     case "eight":
-      return "8"
+      return "8t"
     case "nine":
-      return "9"
-    case "oneight":
-      return "18"
-    case "threeight":
-      return "38"
-    case "fiveight":
-      return "58"
-    case "sevenine":
-      return "79"
-    case "nineight":
-      return "98"
-    case "eightwo":
-      return "82"
-    case "eighthree":
-      return "83"
-    case "twone":
-      return "21"
+      return "9e"
