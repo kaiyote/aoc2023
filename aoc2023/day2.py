@@ -1,4 +1,4 @@
-def part1(data: list[str]):
+def part1(data: list[str]) -> int:
   allowable = { "red": 12, "green": 13, "blue": 14 }
   games = __process_data(data)
 
@@ -9,7 +9,7 @@ def part1(data: list[str]):
 
   return total
 
-def part2(data: list[str]):
+def part2(data: list[str]) -> int:
   games = __process_data(data)
 
   total = 0
@@ -18,10 +18,10 @@ def part2(data: list[str]):
 
   return total
 
-def __process_data(data: list[str]):
+def __process_data(data: list[str]) -> list[dict[str, int]]:
   return [ __line_to_map(line.strip()) for line in data ]
 
-def __line_to_map(line: str):
+def __line_to_map(line: str) -> dict[str, int]:
   [_, rounds] = line.strip().split(":", 2)
   rounds = rounds.strip().split(";")
 

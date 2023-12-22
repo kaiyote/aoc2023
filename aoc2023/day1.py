@@ -1,6 +1,6 @@
 import re
 
-def part1(data: list[str]):
+def part1(data: list[str]) -> int:
   clean_lines = __process_data(data)
 
   total = 0
@@ -10,7 +10,7 @@ def part1(data: list[str]):
 
   return total
 
-def part2(data: list[str]):
+def part2(data: list[str]) -> int:
   clean_lines = __process_data(data)
 
   total = 0
@@ -23,7 +23,7 @@ def part2(data: list[str]):
 
   return total
 
-def __process_data(data: list[str]):
+def __process_data(data: list[str]) -> list[str]:
   return [ line.strip() for line in data ]
 
 def __string_to_int(number_word: re.Match[str]):
